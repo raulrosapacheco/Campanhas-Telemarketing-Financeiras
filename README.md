@@ -13,11 +13,11 @@ Os dados para este projeto foram extraídos do <a href="https://archive.ics.uci.
 UCI Machine Learning Repository é um repositório de dados utilizado na área de aprendizado de máquina e mineração de dados. É mantido pela Universidade da Califórnia, em Irvine (UCI), e contém uma coleção de conjuntos de dados, bancos de dados, e ferramentas de software relacionadas ao aprendizado de máquina e mineração de dados. 
 
 Utilizando o Excel, realizei diversas modificações nos dados, provocando problemas e valores ausentes, para que assim seja possível também trabalhar as técnicas de limpeza e tratamendo de dados.
-Você pode encontrar facilmente o arquivo CSV modificado e utilizado neste projeto na pasta *dados*.
+Você pode encontrar facilmente o arquivo CSV modificado e utilizado neste projeto na pasta **dados**.
 
 ## Dicionário dos Dados
 
-O arquivo CSV utilizado neste projeto possui x registros com y variáveis, sendo **'y'** a variável resposta ou variável alvo. Irei aqui fazer uma breve descrição das variáveis.
+O arquivo CSV utilizado neste projeto possui **45.512 registros** com **17 variáveis**, sendo **'y'** a variável resposta ou variável alvo. Irei aqui fazer uma breve descrição das variáveis.
 
 **job,age**: função, idade;
 
@@ -49,7 +49,7 @@ O arquivo CSV utilizado neste projeto possui x registros com y variáveis, sendo
 
 **poutcome**: resultado da campanha de marketing anterior ("desconhecido","outro","fracasso","sucesso");
 
-**y**: O cliente adquiriu o produto (depósito a prazo) nesta campanha?
+**y**: O cliente adquiriu o produto (depósito a prazo) nesta campanha?.
 
 
 
