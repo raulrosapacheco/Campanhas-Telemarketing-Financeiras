@@ -1,8 +1,8 @@
 # Análise de Dados Para Campanhas de Marketing Direto
 
-Este repositório contém um projeto de análise de dados de campanhas de marketing direto de instituição bancária portuguesa. 
+Este repositório contém um projeto de análise de dados de campanhas de marketing direto de uma instituição bancária portuguesa. 
 
-O objetivo do projeto é fornecer insights sobre o desempenho das campanhas de marketing direto realizadas por instituições financeiras, com o objetivo de ajudar as empresas a entender como elas podem melhorar suas estratégias de marketing e, consequentemente, aumentar suas taxas de conversão.
+O objetivo deste tipo de projeto é fornecer insights sobre o desempenho das campanhas de marketing, com o objetivo de ajudar as empresas a entender como elas podem melhorar suas estratégias de marketing e, consequentemente, aumentar suas taxas de conversão.
 
 O projeto foi desenvolvido utilizando a linguagem Python e várias bibliotecas de análise de dados, como Pandas, NumPy, Matplotlib e Seaborn.
 
@@ -50,6 +50,3 @@ O arquivo CSV utilizado neste projeto possui **45.512 registros** com **17 vari�
 **poutcome**: resultado da campanha de marketing anterior ("desconhecido","outro","fracasso","sucesso");
 
 **y**: O cliente adquiriu o produto (depósito a prazo) nesta campanha?.
-
-
-
