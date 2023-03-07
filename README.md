@@ -99,6 +99,8 @@ Segue abaixo as técnicas utilizadas para o tratar os valores ausentes, é impor
 
 Para responder essa pergunta foi preciso primeiramente criar uma nova coluna para classificar o cliente por faixa etária. Como as idades do cliente mais novo e do cliente mais velho são 18 e 95, respectivamente, foi possível fazer uma divisão igualitária das idades para cada 6 anos. Segue abaixo o gráfico de barras que responde essa pergunta.
 
+![Faixa Etária](https://raw.githubusercontent.com/raulrosapacheco/Campanhas-Telemarketing-Financeiras/main/imagens/faixa-etaria.png)
+
 **2 - Qual a proporção de ligações por nível de escolaridade?**
 
 
