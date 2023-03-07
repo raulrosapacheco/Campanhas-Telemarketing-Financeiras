@@ -93,15 +93,47 @@ Segue abaixo as técnicas utilizadas para o tratar os valores ausentes, é impor
 
 * O dicionário de dados informa que na variável **'pdays'**, -1 indica valores ausentes. Nesta coluna temos então 82% de valores ausentes, portanto foi feito a **deleção da coluna**.
 
-### Análise Univariada
+### Análise 
 
-**1- Qual a proporção de ligações por faixa etária do cliente?**
+**1- Qual a proporção de ligações por faixa etária, escolaridade e estado civil?**
 
-Para responder essa pergunta foi preciso primeiramente criar uma nova coluna para classificar o cliente por faixa etária. Como as idades do cliente mais novo e do cliente mais velho são 18 e 95, respectivamente, foi possível fazer uma divisão igualitária das idades para cada 6 anos. Segue abaixo o gráfico de barras que responde essa pergunta.
+Para responder essa pergunta por faixa etária, foi preciso primeiramente criar uma nova coluna para classificar o cliente por faixa etária. Como as idades do cliente mais novo e do cliente mais velho são 18 e 95, respectivamente, foi possível fazer uma divisão igualitária das idades para cada 6 anos. Segue abaixo o gráfico de barras que responde essa pergunta.
 
-![Faixa Etária](https://raw.githubusercontent.com/raulrosapacheco/Campanhas-Telemarketing-Financeiras/main/imagens/faixa-etaria.png)
+![faixa-etaria](https://user-images.githubusercontent.com/75815212/223574557-ddc66310-12fd-48b9-9ebe-515b09a4734b.png)
 
-**2 - Qual a proporção de ligações por nível de escolaridade?**
+![image](https://user-images.githubusercontent.com/75815212/223575427-4be15dfd-6f4a-4b8d-9146-1c4f7bdfe42b.png)
+
+![image](https://user-images.githubusercontent.com/75815212/223575277-a9a3efb4-feee-44df-b84d-27c43da5e485.png)
+
+**2 - Qual a taxa de conversão dessa campanha?**
+
+A taxa de conversão representa o percentual de clientes contactados que adquiriram o produto bancário.
+
+![image](https://user-images.githubusercontent.com/75815212/223577415-4d728aa9-e2d6-42f1-973e-dc3c33627960.png)
+
+**3 - Existe alguma relação entre a idade e saldo bancário dos clientes?**
+
+![image](https://user-images.githubusercontent.com/75815212/223577555-e5c3e6d7-5595-4746-8277-db0766e7ae64.png)
+
+Pelo gráfico não conseguimos perceber uma relação linear clara entre as a idade e o saldo bancário, entretanto existe um pequeno padrão entre as variáveis.
+A medida que a idade aumenta parece haver um pequeno aumento no saldo bancário.
+
+### Mapas de correlação
+
+A correlação é um coeficiente entre -1 e +1, sendo +1 uma alta correlação positiva, -1 uma alta correlação negativa e próximo de zero não há correlação entra as variáves.
+
+![image](https://user-images.githubusercontent.com/75815212/223577942-7acb968a-2e42-4463-be09-5bf143775990.png)
+
+Pelo Mapa de Correlação acima é possível afirmar que, entre todas as variáveis, a duração do contato telefônico 'duration' é a que possui maior correlação com a variável resposta 'y'.
+
+![image](https://user-images.githubusercontent.com/75815212/223578257-423e9f84-75f7-4c23-b818-9b238cfbd9b4.png)
+
+Através do gráfico de correlação entre as variáveis alvo 'y', 'marital'(estado civil) e 'age_group'(faixa etária) é possível concluir que as pessoas acima dos 60 anos foram as que mais adquiriram o produto bancário.
+
+Além disso, nessa mesma faixa etária(60+), se o cliente for casado existe uma maior probabilidade de ter adquirido o produto do que se este for solteiro e, do mesmo modo, se o cliente for divorciado aumenta ainda mais a chance de ele ter adquirido o produto bancário.
+
+
+
 
 
 
