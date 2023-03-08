@@ -116,6 +116,8 @@ A medida que a idade aumenta parece haver um pequeno aumento no saldo bancário.
 
 ![marketing](https://user-images.githubusercontent.com/75815212/223589528-ac380d9e-66c8-4f92-a924-ed32d0abbf3a.jpg)
 
+<br>
+
 ### Mapas de correlação
 
 <br>
