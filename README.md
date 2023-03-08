@@ -14,17 +14,9 @@ O projeto foi desenvolvido utilizando a linguagem Python e várias bibliotecas d
 
 Durante o projeto foi realizado as etapas de análise exploratória dos dados, tranformação de variáveis, identificação e tratamento de valores ausentes, análise univariada e multivariada.
 
-Você encontra todo o passo a passo da análise no link: <a href="https://colab.research.google.com/drive/1kRSyRqks2J-FKqA552nSfBwOUOIYPzB-?usp=sharing">Análise de Dados Para Campanhas de Marketing Direto</a>.
+Você encontra todo o passo a passo da análise no link: <a href="https://colab.research.google.com/drive/1EqbT2ZMWRREg6EUF9mMcP1xM9wb8i_mi?usp=sharing">Análise de Dados Para Campanhas de Marketing Direto</a>.
 
 Todas as decisões tomadas durante a análise estão documentadas abaixo, na seção **Relatório da Análise**.
-
-## Objetivos da Aprendizagem 
-* Desmembrar variáveis (colunas) com mais de uma informação?
-* Definir e identificar valores ausentes;
-* Decidir qual estratégia de tratamento de valores ausentes é mais a mais adequada para cada cenário;
-* Categorização de variável numérica;
-* Interpretação do histograma, box plot, média, mediana e moda;
-* Análise univariada, bivariada e multivariada.
 
 ## Fonte dos Dados
 
@@ -87,58 +79,67 @@ Segue abaixo as técnicas utilizadas para o tratar os valores ausentes, é impor
 
 * O percentual de valores ausentes da coluna **'age'** era muito baixo, em torno de 0,06%. Analisando o histograma, o boxplot, a media, a moda e a mediana desta variável foi possivel perceber uma assimetria nos dados e diversos valores outliers, sendo assim a média não deve ser usada como estratégia para preenchimento dos valores ausentes da coluna 'age'. Alem disso, a moda(32) é um valor muito abaixo da media(41) e da mediana(39). Se imputar a moda, estaria reforçando essa informação. Portanto, os valores ausentes da variável 'age' foram preenchidos pela **mediana(39)**.
 
+![image](https://user-images.githubusercontent.com/75815212/223592786-44f1b96d-cf83-4c49-a415-510e289435ab.png)
+
 * Na a coluna **'month'**, que representa o mês do contato com o cliente, possuia 40 valores ausentes, representando um percentual de 0,09%. A variável 'month' é do tipo categórica, portanto tomei a decisão de preencher seus valores ausentes com a **moda(may)**.
 
 * A coluna **'y'** indica se o cliente aderiu ou não ao produto bancário oferecido. A percentual de valores ausentes nessa coluna é de 0,04%, ou seja, um valor baixo. No entanto, quando se trata de valores ausentes na variável alvo, a imputação não é adequada, pois pode introduzir um viés nos resultados da análise. Isso ocorre porque a imputação pressupõe que os dados ausentes são aleatórios e não relacionados com outras variáveis, o que pode não ser verdadeiro para a variável alvo. Portanto, neste caso, foi **delatado os registros** que possuem valor ausente na variável 'y'.
 
 * O dicionário de dados informa que na variável **'pdays'**, -1 indica valores ausentes. Nesta coluna temos então 82% de valores ausentes, portanto foi feito a **deleção da coluna**.
 
-### Análise 
+### Análise Univariada, Bivariada e Multivariada
 
 **1- Qual a proporção de ligações por faixa etária, escolaridade e estado civil?**
 
 Para responder essa pergunta por faixa etária, foi preciso primeiramente criar uma nova coluna para classificar o cliente por faixa etária. Como as idades do cliente mais novo e do cliente mais velho são 18 e 95, respectivamente, foi possível fazer uma divisão igualitária das idades para cada 6 anos. Segue abaixo o gráfico de barras que responde essa pergunta.
 
-![faixa-etaria](https://user-images.githubusercontent.com/75815212/223574557-ddc66310-12fd-48b9-9ebe-515b09a4734b.png)
+Analisando o gráfico de barras abaixo é possivel concluir que mais de 45% dos clientes contactados nesta campanha possuiam entre 30 e 41 anos.
 
-![image](https://user-images.githubusercontent.com/75815212/223575427-4be15dfd-6f4a-4b8d-9146-1c4f7bdfe42b.png)
+![Slide1](https://user-images.githubusercontent.com/75815212/223588393-cf8f974c-64e2-4f68-8fa5-92e65d680450.PNG)
 
-![image](https://user-images.githubusercontent.com/75815212/223575277-a9a3efb4-feee-44df-b84d-27c43da5e485.png)
+<br>
+
+Conforme mostrado nos gráficos de pizza abaixo, a grande maioria dos clientes contactados possuem ensino médio(secondary) e são casados(married).
+
+![Slide3](https://user-images.githubusercontent.com/75815212/223588436-e4bac313-cd88-4659-96c1-c1872519b2ca.PNG)
+
+<br>
 
 **2 - Qual a taxa de conversão dessa campanha?**
 
-A taxa de conversão representa o percentual de clientes contactados que adquiriram o produto bancário.
-
-![image](https://user-images.githubusercontent.com/75815212/223577415-4d728aa9-e2d6-42f1-973e-dc3c33627960.png)
+A taxa de conversão representa o percentual de clientes contactados que adquiriram o produto bancário. No gráfico de pizza abaixo é possível identificar que esse percentual é de 11,7%.
 
 **3 - Existe alguma relação entre a idade e saldo bancário dos clientes?**
 
-![image](https://user-images.githubusercontent.com/75815212/223577555-e5c3e6d7-5595-4746-8277-db0766e7ae64.png)
-
-Pelo gráfico não conseguimos perceber uma relação linear clara entre as a idade e o saldo bancário, entretanto existe um pequeno padrão entre as variáveis.
+Pelo gráfico scatter plot abaixo não conseguimos perceber uma relação linear clara entre as a idade e o saldo bancário, entretanto existe um pequeno padrão entre as variáveis.
 A medida que a idade aumenta parece haver um pequeno aumento no saldo bancário.
+
+![marketing](https://user-images.githubusercontent.com/75815212/223589528-ac380d9e-66c8-4f92-a924-ed32d0abbf3a.jpg)
 
 ### Mapas de correlação
 
-A correlação é um coeficiente entre -1 e +1, sendo +1 uma alta correlação positiva, -1 uma alta correlação negativa e próximo de zero não há correlação entra as variáves.
+<br>
 
-![image](https://user-images.githubusercontent.com/75815212/223577942-7acb968a-2e42-4463-be09-5bf143775990.png)
+![Slide4](https://user-images.githubusercontent.com/75815212/223589630-ec3c524c-b7e2-45a7-bbeb-5487b08b0183.PNG)
+
+A correlação é um coeficiente entre -1 e +1, sendo +1 uma alta correlação positiva, -1 uma alta correlação negativa e próximo de zero não há correlação entra as variáves.
 
 Pelo Mapa de Correlação acima é possível afirmar que, entre todas as variáveis, a duração do contato telefônico 'duration' é a que possui maior correlação com a variável resposta 'y'.
 
-![image](https://user-images.githubusercontent.com/75815212/223578257-423e9f84-75f7-4c23-b818-9b238cfbd9b4.png)
+<br>
+
+![Slide5](https://user-images.githubusercontent.com/75815212/223589658-7bf4451a-e932-4d1f-826a-99de17fcb1de.PNG)
 
 Através do gráfico de correlação entre as variáveis alvo 'y', 'marital'(estado civil) e 'age_group'(faixa etária) é possível concluir que as pessoas acima dos 60 anos foram as que mais adquiriram o produto bancário.
 
 Além disso, nessa mesma faixa etária(60+), se o cliente for casado existe uma maior probabilidade de ter adquirido o produto do que se este for solteiro e, do mesmo modo, se o cliente for divorciado aumenta ainda mais a chance de ele ter adquirido o produto bancário.
 
-
-
-
-
-
-
-
-
+## Objetivos da Aprendizagem 
+* Desmembrar variáveis (colunas) com mais de uma informação;
+* Definir e identificar valores ausentes;
+* Decidir qual estratégia de tratamento de valores ausentes é mais a mais adequada para cada cenário;
+* Categorização de variável numérica;
+* Interpretação do histograma, box plot, média, mediana e moda;
+* Análise univariada, bivariada e multivariada.
 
 
